@@ -9,8 +9,8 @@ void MainRun(TString macro, TString macro_argc, TString projectDir = "")
 
    gSystem->Load("libGui.so");
    gSystem->Load("libRooFit");
-   gSystem->Load("libBASE.so");
-   gSystem->Load("libTASKS.so");
+   gSystem->Load("libTaskBase.so");
+   gSystem->Load("libTaskRsnOut.so");
 
    Printf(projectDir.Data());
    gSystem->AddIncludePath(TString::Format("-I%sinclude", projectDir.Data()).Data());

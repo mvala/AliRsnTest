@@ -9,6 +9,7 @@ function clean() {
     rm -Rf $PROJECT_DIR/pars
     rm -Rf $PROJECT_DIR/lib
     rm -Rf $PROJECT_DIR/include
+    rm -Rf $PROJECT_DIR/tmp
     rm -Rf $PROJECT_DIR/.settings
     echo "==> Cleaning done"
 }
