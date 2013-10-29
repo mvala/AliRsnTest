@@ -11,3 +11,9 @@
 *.lai
 *.la
 *.a
+
+# Project stuff
+*.settings
+build
+lib
+include
