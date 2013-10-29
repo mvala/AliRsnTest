@@ -55,6 +55,7 @@ AliRsnTaskCanvas::~AliRsnTaskCanvas()
    //
 }
 
+//______________________________________________________________________________
 void AliRsnTaskCanvas::Exec(Option_t* /*option*/)
 {
    Printf("Running Canvas task ...");
@@ -72,6 +73,7 @@ void AliRsnTaskCanvas::Exec(Option_t* /*option*/)
    }
 
    GetOptimalDivide(numFolders,x,y);
+
    for (Int_t i = 0; i < fInput->GetEntries(); ++i) {
       o = (TObject *) fInput->At(i);
       if (o->InheritsFrom("TFolder")) {
@@ -99,6 +101,7 @@ void AliRsnTaskCanvas::Exec(Option_t* /*option*/)
 
 }
 
+//______________________________________________________________________________
 void AliRsnTaskCanvas::GetOptimalDivide(Int_t num, Int_t& x, Int_t& y)
 {
    Double_t tmp = TMath::Sqrt((Double_t) num);

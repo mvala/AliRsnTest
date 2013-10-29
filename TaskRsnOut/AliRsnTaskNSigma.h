@@ -24,11 +24,15 @@ public:
    virtual void   Exec(Option_t *option);
 
    void UseRooFit(Bool_t useRooFit=kTRUE) { fUseRooFit = useRooFit;}
-   TObject *MyExec(Int_t binf = 1, Int_t binl = 2, Double_t fitMin = -2.0, Double_t fitMax = 2.0, Double_t min = -4.0, Double_t max = 4.0);
+   TObject *GetDrawObject();
+   void SetParameters(Int_t binf = 1, Int_t binl = 2, Double_t fitMin = -2.0, Double_t fitMax = 2.0, Double_t min = -4.0, Double_t max = 4.0);
 
 private:
 
-   Bool_t fUseRooFit;
+   Bool_t            fUseRooFit;       // flag if RooFit should be used
+   Int_t             fBinRange[2];     // bin range of kinematics variable bin
+   Double_t          fFitRange[2];     // fit range
+   Double_t          fFitDrawRange[2]; // fit draw range
 
    ClassDef(AliRsnTaskNSigma, 1)
 };
